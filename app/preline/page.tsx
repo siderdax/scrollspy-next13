@@ -1,10 +1,21 @@
-import Image from "next/image";
+'use client'
+import { useEffect } from 'react'
 
 export default function Home() {
+  useEffect(() => {
+    // @ts-ignore
+    import('preline')
+  }, [])
+
   return (
-    <main className="flex justify-center p-4">
+    <main className="flex flex-col justify-center p-4">
+      <div className="flex justify-center">
+        <span className="inline-flex items-center gap-4 rounded-full bg-pink-500 px-3 py-1.5 text-xs font-medium text-white">
+          preline ready
+        </span>
+      </div>
       <div className="flex flex-row justify-center">
-        <div className="mx-8 bg-green-900/50 min-w-fit p-4">
+        <div className="mx-8 min-w-fit bg-green-900/50 p-4">
           <div className="sticky top-0">
             <h2 className="text-xl font-medium">Navbar</h2>
 
@@ -156,36 +167,68 @@ export default function Home() {
             <div id="item-1-1">
               <h3 className="text-lg font-semibold">Item 1-1</h3>
               <p className="m-1">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem
-                nostrum beatae eius quam enim provident, est laudantium ab eos
-                neque error quo possimus quibusdam illo consequatur esse
-                architecto aperiam quod aut iure! Quis fugit iste tempore
-                sapiente quidem tenetur vel ut quasi veritatis sequi, nostrum
-                sunt officiis itaque! Tempore nulla ab dolorum optio doloribus
-                assumenda dolor natus dignissimos temporibus quibusdam? Maiores
-                consequatur eius debitis velit beatae eos culpa ut, eaque fuga
-                libero delectus voluptatum, aspernatur error sint nemo corrupti
-                possimus tenetur nobis explicabo dignissimos! Repudiandae quia
-                deleniti quibusdam soluta maxime id, ut itaque. Sunt explicabo
-                iste, magni ipsam nulla suscipit!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Necessitatibus saepe vero nostrum facere maxime voluptatum odit
+                corporis aspernatur quis earum architecto hic modi repellat quo
+                fugiat quae eos, iste laboriosam non beatae impedit? Eaque ipsa
+                ullam possimus, doloribus at perspiciatis eum laborum
+                consectetur ad beatae placeat iusto, rerum ut quod amet?
+                Molestiae animi mollitia, libero ipsam amet nesciunt, similique
+                magni veniam temporibus dignissimos tenetur deleniti repellendus
+                dolorum corporis ipsa. Repudiandae quod adipisci hic quaerat
+                sint sequi, id error ex ea suscipit dolor magni impedit iste
+                architecto ipsa molestiae labore asperiores facilis facere.
+                Eaque deserunt incidunt debitis consectetur rem possimus
+                reprehenderit beatae at quas est amet fugiat placeat architecto
+                magnam nostrum molestiae harum, veritatis eius et dolor ut
+                nesciunt reiciendis facere laudantium. Commodi dolores
+                distinctio illum amet aliquid! Illum dolore libero, rerum
+                delectus fuga voluptas nemo voluptate, ratione labore distinctio
+                voluptatem. Neque dolore error fugiat. Repellat optio aliquam
+                temporibus quibusdam. Corporis officia atque suscipit? Earum et
+                sapiente sit nobis nam! Quod quasi unde repudiandae rem veniam
+                laudantium itaque deserunt debitis, numquam illo similique
+                consectetur iure sit culpa neque et pariatur hic soluta
+                officiis, asperiores odit tenetur nesciunt! Alias magnam vel
+                officia optio mollitia suscipit, in eius consectetur pariatur
+                sequi ducimus saepe?
               </p>
             </div>
 
             <div id="item-1-2">
               <h3 className="text-lg font-semibold">Item 1-2</h3>
               <p className="m-1">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem
-                nostrum beatae eius quam enim provident, est laudantium ab eos
-                neque error quo possimus quibusdam illo consequatur esse
-                architecto aperiam quod aut iure! Quis fugit iste tempore
-                sapiente quidem tenetur vel ut quasi veritatis sequi, nostrum
-                sunt officiis itaque! Tempore nulla ab dolorum optio doloribus
-                assumenda dolor natus dignissimos temporibus quibusdam? Maiores
-                consequatur eius debitis velit beatae eos culpa ut, eaque fuga
-                libero delectus voluptatum, aspernatur error sint nemo corrupti
-                possimus tenetur nobis explicabo dignissimos! Repudiandae quia
-                deleniti quibusdam soluta maxime id, ut itaque. Sunt explicabo
-                iste, magni ipsam nulla suscipit!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor,
+                expedita veniam labore velit vero explicabo et quasi sint
+                necessitatibus debitis sunt soluta laudantium harum illum
+                obcaecati ut commodi magni voluptatum. Reiciendis culpa facere,
+                recusandae laboriosam sequi voluptatibus magnam totam
+                temporibus, voluptatum eius labore numquam distinctio blanditiis
+                consectetur, corporis consequuntur. Consequuntur, porro ullam
+                eveniet incidunt error animi vero cum sed neque provident.
+                Assumenda obcaecati labore porro libero sunt, nemo ex unde fuga
+                officia vel maiores laborum accusantium voluptatem debitis rerum
+                doloremque cum, quae id enim quos pariatur temporibus earum
+                itaque! A repellendus numquam omnis aliquid mollitia maxime amet
+                veritatis architecto error quae aut alias, voluptatem dolor
+                nostrum. Maxime aspernatur rerum ab doloremque id officiis
+                saepe, incidunt est? Perferendis, impedit! Nostrum facilis sequi
+                quod animi natus ipsa pariatur deserunt, fugit error hic
+                officia, aut neque amet. Excepturi consequuntur dicta voluptates
+                fugiat illo quos, dignissimos aliquam ex, blanditiis animi ut
+                fugit eius minus minima, quisquam natus autem expedita illum
+                ipsum reiciendis incidunt? Sequi unde sint dolorem id cupiditate
+                sit, voluptates, harum, impedit inventore ipsam illum quisquam
+                iste? Impedit asperiores maxime similique quisquam aliquam ex
+                corrupti delectus! Error nulla, illum magnam rem sunt maxime
+                minus ratione ab, cum vel dolorum cumque nam odio, possimus
+                eveniet. Hic quasi repudiandae inventore ipsam obcaecati ducimus
+                odit sint, iste aliquid aut, et sapiente dolor deleniti officiis
+                ratione adipisci sit commodi veniam voluptatum, exercitationem
+                fugiat officia. Soluta, unde. Fugiat neque maiores tempore,
+                voluptatibus quos laboriosam doloribus sint omnis impedit
+                dignissimos aspernatur eaque deleniti quis libero eos, possimus
+                tempora architecto?
               </p>
             </div>
 
@@ -226,17 +269,42 @@ export default function Home() {
             <div id="item-3-1">
               <h3 className="text-lg font-semibold">Item 3-1</h3>
               <p className="m-1">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Provident voluptas error reiciendis cum iste reprehenderit
-                repudiandae architecto eveniet magni optio, facilis iusto
-                pariatur ducimus natus. Reiciendis porro laudantium magnam sunt
-                soluta modi molestiae esse consequatur? Nobis facere iusto ipsam
-                dicta qui? Maxime mollitia assumenda ipsa ad modi expedita
-                necessitatibus recusandae facere debitis facilis, eos deserunt.
-                Deleniti earum repudiandae maxime aut consectetur corrupti eaque
-                vel? Quae voluptatem perferendis dolorum quia provident, rerum
-                distinctio reprehenderit incidunt, deserunt at veritatis dolor
-                fugiat labore.
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis
+                excepturi nobis delectus officia aut sapiente quisquam officiis
+                ullam eum reiciendis ad reprehenderit rerum, dolorum voluptate
+                ratione, enim laborum sunt quasi quibusdam rem. Ducimus
+                reiciendis ex molestiae expedita aut ad accusamus deleniti,
+                assumenda laudantium, distinctio nostrum officia neque magni
+                laboriosam dolor unde a modi recusandae. Aut accusamus deserunt
+                labore fugiat reiciendis obcaecati quis animi. Officia excepturi
+                eveniet aut ex minima dolorem earum libero ipsum nesciunt,
+                possimus architecto voluptatem dicta, sed ratione perferendis
+                qui ducimus eum accusantium. Ipsa perferendis, maiores alias
+                vero atque facilis rem eum. Dignissimos assumenda, magnam cumque
+                repellendus autem possimus eum beatae mollitia consequuntur et
+                esse inventore fugit nemo natus accusantium eveniet voluptatem
+                incidunt optio omnis? Quasi, officiis, saepe eum nesciunt
+                molestiae nulla rerum quia esse reprehenderit placeat quis eius
+                ab inventore, nihil eligendi ipsam provident quidem laboriosam
+                distinctio deserunt odio. Natus veritatis iste quod soluta
+                totam, aspernatur quaerat impedit similique aliquid fuga dicta
+                quidem sed magnam, laborum facilis quae, quos reiciendis. Amet
+                qui optio maiores, id reprehenderit commodi tempora excepturi
+                doloremque atque eum at quos vel cupiditate odio impedit quam
+                deserunt laborum, corrupti, ipsam odit rerum. Est sequi
+                laudantium inventore sapiente enim, quos repellat ipsa quisquam?
+                Tempora, dicta nemo saepe quis harum, at aspernatur architecto
+                provident, nisi tempore eveniet delectus possimus non sunt sequi
+                voluptatum fuga voluptatem? Temporibus quae dignissimos repellat
+                a, culpa nulla libero incidunt, esse, tenetur harum sed. Ex
+                neque, aspernatur asperiores tempora iure, ab architecto debitis
+                delectus porro velit, tempore quo blanditiis minus? Aspernatur
+                illum pariatur eum dignissimos accusantium, placeat sed nam illo
+                quidem delectus quas ipsam fuga. Fuga ab repellat minus nisi,
+                iste blanditiis quidem natus eum dolore ea debitis accusantium
+                eligendi neque commodi, dicta velit explicabo inventore amet
+                veniam porro necessitatibus dolores facere quia excepturi! Quae
+                nulla architecto magni assumenda velit ea accusantium!
               </p>
             </div>
 
@@ -253,5 +321,5 @@ export default function Home() {
         </div>
       </div>
     </main>
-  );
+  )
 }
