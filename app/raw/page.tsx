@@ -1,7 +1,7 @@
 'use client'
 import { useEffect } from 'react'
 
-export default function Home() {
+export default function Page() {
   useEffect(() => {
     addEventListener('scroll', () => {
       const screenHeight = window.innerHeight
