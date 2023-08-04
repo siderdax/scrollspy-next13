@@ -1,32 +1,7 @@
 'use client'
-import { useEffect } from 'react'
+import ScrollSpy from 'react-ui-scrollspy'
 
 export default function Page() {
-  useEffect(() => {
-    addEventListener('scroll', () => {
-      const screenHeight = window.innerHeight
-      const elements = Array.prototype.slice.call(
-        document.querySelectorAll('[id^=item-'),
-        0,
-      ) as Element[]
-      const lastTopEl = elements.reduce<Element | null>((acc, next) => {
-        if (next.getBoundingClientRect().bottom <= screenHeight) {
-          return next
-        } else {
-          return acc
-        }
-      }, null)
-
-      document.querySelectorAll('[href^="#item-"]').forEach((item) => {
-        if (item.getAttribute('href') === `#${lastTopEl?.id}`) {
-          item.classList.add('font-bold')
-        } else {
-          item.classList.remove('font-bold')
-        }
-      })
-    })
-  }, [])
-
   return (
     <main className="flex justify-center p-4">
       <div className="flex flex-row justify-center">
@@ -37,6 +12,7 @@ export default function Page() {
             <ul className="">
               <li>
                 <a
+                  data-to-scrollspy-id="item-1"
                   href="#item-1"
                   className="block py-0.5 text-sm font-medium leading-6 text-slate-700 hover:text-slate-900 dark:text-slate-400  dark:hover:text-slate-300"
                 >
@@ -45,6 +21,7 @@ export default function Page() {
                 <ul>
                   <li className="ml-4">
                     <a
+                      data-to-scrollspy-id="item-1-1"
                       href="#item-1-1"
                       className="group flex items-start gap-x-2 py-0.5 text-sm leading-6 text-gray-700 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-300"
                     >
@@ -68,6 +45,7 @@ export default function Page() {
                   </li>
                   <li className="ml-4">
                     <a
+                      data-to-scrollspy-id="item-1-2"
                       href="#item-1-2"
                       className="group flex items-start gap-x-2 py-0.5 text-sm leading-6 text-gray-700 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-300"
                     >
@@ -93,6 +71,7 @@ export default function Page() {
               </li>
               <li>
                 <a
+                  data-to-scrollspy-id="item-2"
                   href="#item-2"
                   className="block py-0.5 text-sm font-medium leading-6 text-slate-700 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-300"
                 >
@@ -101,6 +80,7 @@ export default function Page() {
               </li>
               <li data-hs-scrollspy-group>
                 <a
+                  data-to-scrollspy-id="item-3"
                   href="#item-3"
                   className="block py-0.5 text-sm font-medium leading-6 text-slate-700 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-300"
                 >
@@ -109,6 +89,7 @@ export default function Page() {
                 <ul>
                   <li className="ml-4">
                     <a
+                      data-to-scrollspy-id="item-3-1"
                       href="#item-3-1"
                       className="group flex items-start gap-x-2 py-0.5 text-sm leading-6 text-gray-700 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-300"
                     >
@@ -132,6 +113,7 @@ export default function Page() {
                   </li>
                   <li className="ml-4">
                     <a
+                      data-to-scrollspy-id="item-3-1"
                       href="#item-3-2"
                       className="group flex items-start gap-x-2 py-0.5 text-sm leading-6 text-gray-700 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-300"
                     >
@@ -160,7 +142,7 @@ export default function Page() {
         </div>
 
         <div className="grow">
-          <div className="">
+          <ScrollSpy>
             <div id="item-1">
               <h3 className="text-lg font-semibold">Item 1</h3>
               <p className="m-1">
@@ -332,7 +314,7 @@ export default function Page() {
                 temporibus fuga molestias quae possimus?
               </p>
             </div>
-          </div>
+          </ScrollSpy>
         </div>
       </div>
     </main>
